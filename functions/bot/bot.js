@@ -15,6 +15,14 @@ bot.on('text', (ctx) => {
   ctx.reply('Uwu');
 });
 
+bot.command('quit', async (ctx) => {
+  // Explicit usage
+  // await ctx.telegram.leaveChat(ctx.message.chat.id);
+
+  // Using context shortcut
+  await ctx.leaveChat();
+});
+
 // AWS event handler syntax (https://docs.aws.amazon.com/lambda/latest/dg/nodejs-handler.html)
 exports.handler = async (event) => {
   try {
