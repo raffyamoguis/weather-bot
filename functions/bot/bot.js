@@ -12,7 +12,7 @@ bot.start((ctx) => {
 });
 
 bot.on('text', (ctx) => {
-  ctx.reply(ctx);
+  ctx.reply('This is a test');
 });
 
 bot.command('quit', async (ctx) => {
