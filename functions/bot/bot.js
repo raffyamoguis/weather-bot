@@ -15,8 +15,8 @@ bot.hears('hi', (ctx) => {
   ctx.reply('Hello there');
 });
 
-bot.hears('sup', (ctx) => {
-  ctx.reply('Sup Nigga!');
+bot.command('update', (ctx) => {
+  ctx.reply('Hey you used a command');
 });
 
 bot.on('text', (ctx) => {
