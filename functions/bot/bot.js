@@ -15,6 +15,10 @@ bot.hears('hi', (ctx) => {
   ctx.reply('Hello there');
 });
 
+bot.hears('sup', (ctx) => {
+  ctx.reply('Sup Nigga!');
+});
+
 bot.on('text', (ctx) => {
   ctx.reply('This is a test');
 });
