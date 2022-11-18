@@ -1,6 +1,5 @@
 const { Telegraf } = require('telegraf');
 const bot = new Telegraf(process.env.BOT_TOKEN);
-const { updateCommand } = require('../../commands');
 
 bot.start((ctx) => {
   console.log('Received /start command');
@@ -16,7 +15,9 @@ bot.hears('hi', (ctx) => {
   ctx.reply('Hello there');
 });
 
-bot.command('update', updateCommand);
+bot.command('update', (ctx) => {
+  ctx.reply('Commands');
+});
 
 bot.on('text', (ctx) => {
   ctx.reply('This is a test');
